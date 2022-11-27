@@ -11,6 +11,7 @@ const schema = mongoose.Schema({
     title:"",
     tuitContent:"",
     image:"",
+    _id: Number,
     key_id:Number
 }, {collection: 'tuits'});
 export default schema;
