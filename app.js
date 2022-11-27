@@ -13,7 +13,21 @@ const CONNECTION_STRING = 'mongodb+srv://root:root@cluster0.408urwm.mongodb.net/
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
-app.use(cors())
+
+const corsOpts = {
+    origin: '*',
+
+    methods: [
+        'GET',
+        'POST',
+    ],
+
+    allowedHeaders: [
+        'Content-Type',
+    ],
+};
+
+app.use(cors(corsOpts))
 app.use(express.json());
 TuitsController(app);
 HelloController(app),
