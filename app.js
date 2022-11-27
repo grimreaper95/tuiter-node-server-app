@@ -14,6 +14,8 @@ const corsOpts = {
     origin: '*',
 
     methods: [
+        'DELETE',
+        'PUT',
         'GET',
         'POST',
     ],
